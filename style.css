@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import 'animate.css';
+
+body{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+
+
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.589);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid #742ccc;
+    z-index: 30;
+}
+
+
+header>img{
+    max-height: 100%;
+    margin-left: 100px;
+    
+}
+header>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+header>div>h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-right: 100px;
+    background-color: #0451DE;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+
+}
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap:wrap;
+    background-image: url(imagens/wave-\(azul\).png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:contain;
+    align-items: center;
+}
+    
+#home>div{
+    max-width: 700px;
+    height: 100vh;
+
+}
+
+
+ 
+#homeA>h1{
+    color: #0451DE;
+    font-family: 'Russo One', sans-serif;
+    font-size: 100px;  
+}
+
+#homeA>h2{
+    color: #0451DE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+#homeA>nav>button{
+    background-color: #0451DE;
+    max-width: 300px;
+    color: white;
+    padding: 20px;
+    border: none;
+   
+    font-family: 'Russo One', sans-serif;
+}
+
+#homeA{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 90vw;
+    padding: 20px;
+    
+}
+
+#homeB{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    max-height: 50vh;
+}
+#homeB>img{
+    margin-top: 100px;
+    max-height: 400px;
+    max-width: 80vw;
+    
+}
+
+#Section_Serviços{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    background-color: #762FCF;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size:contain;
+
+}
+#Section_Serviços>h1{
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+}
+#DivServiços{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.CardServiçoes{
+    margin: 30px;
+    background-color: aliceblue;
+    height: 400px;
+    width: 500px;
+    max-width: 80vw;
+    overflow: hidden;
+
+}
+
+#cardestrategia{
+    background-image: url(imagens/pexels-fauxels-3184292.jpg);
+}
+#cardTrafego{
+    background-image: url(imagens/pexels-jakubzerdzicki-18186227.jpg);
+}
+#cardatom{
+    background-image:url(imagens/pexels-shkrabaanthony-4348403.jpg);
+}
+.CardServiçoes {
+    position: relative; /* Adiciona posicionamento relativo */
+    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.CardServiçoes::before {
+    content: ""; /* Adiciona conteúdo vazio ao pseudo-elemento */
+    position: absolute; /* Posiciona o elemento de sobreposição absolutamente em relação ao pai */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de sobreposição (preto com 50% de opacidade) */
+    
+}
+
+
+
+
+.CardServiçoes>h2{
+    background-color: white;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    border-radius: 5px;
+    color: #742ccc;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.CardServiçoes>h2:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+
+
+  
+  
+  .button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: red;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+  }
+  
+  .button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button-30:active {
+    box-shadow: red 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  
+  #abaConfig>p {
+    margin: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  
+  #redesconfg {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 20px;
+  
+  }
+  
+  
+  .bntrede {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  
+  }
+  
+  span {
+    display: inline-block;
+    transform: skew(21deg);
+  }
+  
+  .bntrede::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  .bntrede:hover {
+    color: #fff;
+  }
+  
+  .bntrede:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+
+  #abafluante{
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    display:none;
+}
+
+#abafluante::before {
+    content: ""; /* Adiciona conteúdo vazio ao pseudo-elemento */
+    position: absolute; /* Posiciona o elemento de sobreposição absolutamente em relação ao pai */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de sobreposição (preto com 50% de opacidade) */
+    
+}
+
+
+
+#abaConfig {
+    
+    position: absolute;
+    height: 90vh;
+    width: 90vw;
+    background-color: #ffffff;
+    border-radius: 5px;
+    animation: bounceIn;
+    animation-duration: 0.5s;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px 3px, #D6D6E7 0 -3px inset;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    display:none;
+    
+  }
+
+#abaConfig>nav {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  
+  }
+
+  
+  
+#abaTrafego{
+    position: absolute;
+    height: 90vh;
+    width: 70vw;
+    background-color: #ffffff;
+    border-radius: 5px;
+    animation: bounceIn;
+    animation-duration: 0.5s;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px 3px, #D6D6E7 0 -3px inset;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    display: none;
+    
+    
+}
+
+#abaTrafego>nav {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  
+}
+
+
+#abaAltomoçao{
+    position: absolute;
+    height: 90vh;
+    width: 70vw;
+    background-color: #ffffff;
+    border-radius: 5px;
+    animation: bounceIn;
+    animation-duration: 0.5s;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px 3px, #D6D6E7 0 -3px inset;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    display: none;
+}
+
+#abaAltomoçao>nav {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  
+}
+
+
+
+
+
+

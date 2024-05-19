@@ -104,7 +104,7 @@ header>div>h2{
     display: flex;
     align-items:center;
     justify-content: center;
-    max-height: 50vh;
+    max-height: 30vh;
 }
 #homeB>img{
     max-height: 400px;

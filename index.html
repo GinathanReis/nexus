@@ -5,77 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS</title>
     <link rel="stylesheet" href="style.css">
-    <script src="functions.js"></script>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-    
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
+
 <body>
-
     <section id="abafluante">
-
-        <div id="abaConfig">
-            <nav> 
-                <button class="button-30" role="button" onclick="fecharAbaConfig()">X</button> 
-            </nav>
-            <iframe  src="https://www.youtube.com/embed/Igc8-jkoyLw?si=evmf2JrcX2Bsnt_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="VideoExplicativo" ></iframe>
-            <div class="DescriçaoAba">
-                <h2 class="Descriçaoh2Aba">
-                    Na Nexus, estamos na vanguarda da transformação digital, oferecendo soluções de captura digital e automação que impulsionam o crescimento e a eficiência das empresas. Nossa missão é 
-                </h2>
-            </div>
-            
-            
-
-        </div>
-
-
-
-        <div id="abaTrafego">
-            <nav> 
-                <button class="button-30" role="button" onclick="fecharAbaConfig()">X</button> 
-            </nav>
-            <H1> TRAFEGO</H1>
-        </div>
-
-        <div id="abaAltomoçao">
-            <nav> 
-                <button class="button-30" role="button" onclick="fecharAbaConfig()">X</button> 
-            </nav>
-            <H1>ALTOMAÇAO</H1>
-        </div>
-    
-
-
+        <!-- Seu conteúdo da aba flutuante -->
     </section>
-   
-    
 
     <header>
         <img src="imagens/logo.png" alt="">
         <div>
-            <h2> contato </h2>
-            
+            <h2>contato</h2>
         </div>
-        
     </header>
+
     <section id="home">
-        <div id="homeA">
-        <h1> Nexus</h1>
-        <h2>
-            Na Nexus, estamos na vanguarda da transformação digital, oferecendo soluções de captura digital e automação que impulsionam o crescimento e a eficiência das empresas. Nossa missão é fornecer estratégias de marketing digital personalizadas que integram as mais avançadas tecnologias de automação para maximizar a captura e conversão de clientes.
-        </h2>
-        <nav>
-            <button>MAIS UM POUCO SOBRE NEXUS</button> 
-            <button>NOSSOS SERVIÇOS</button> 
-        </nav>
-        </div>
+
+        <form id="contact-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="company">Nome da Empresa:</label>
+            <input type="text" id="company" name="company" required>
+            <br>
+            <label for="revenue">Faturamento Mensal (em R$):</label>
+            <input type="text" id="revenue" name="revenue" required>
+            <br>
+            <label for="industry">Segmento da Empresa:</label>
+            <select id="industry" name="industry" required>
+                <option value="">Selecione o Segmento</option>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Varejo">Varejo</option>
+                <option value="Financeiro">Financeiro</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <br>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+
         
-        <div id="homeB">
-            <img src="imagens/Na_Nexus__oferecemos_estratégias_personalizadas_para_a_captação_de_clientes_e_aumento_de_vendas._Utilizamos_tráfego_pago_e_automações_humanizadas_para_garantir_resultados_eficazes_e_mensuráveis._S-rem.png" alt="">
-        </div>
+
+       
     </section>
 
     <section id="Section_Serviços">
@@ -87,11 +65,31 @@
             <div class="CardServiçoes" id="cardTrafego">
                 <h2 onclick="abrirAbaTrafego()"> TRAFEGO </h2>
             </div>
-            <div class="CardServiçoes" id="cardatom" >
+            <div class="CardServiçoes" id="cardatom">
                 <h2 onclick="abrirAbaAltomoçao()"> altomaçao </h2>
             </div>
         </div>
     </section>
-    
+
+    <script>
+        (function() {
+            emailjs.init('i_jRp0DGmIk93_rIP'); // Substitua 'user_youruserid' pelo seu ID de usuário do EmailJS
+        })();
+
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                emailjs.sendForm('service_rlyhrp5', 'template_4yemgiq', this) // Substitua 'template_4yemgiq' pelo seu ID de modelo
+                .then(function() {
+                    alert('Formulário enviado com sucesso!');
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    alert('Ocorreu um erro. Por favor, tente novamente.');
+                    console.log('Erro:', error);
+                });
+            });
+        }
+    </script>
 </body>
 </html>

@@ -9,6 +9,21 @@ body{
 }
 
 
+#contact-form {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 5px;
+    animation: bounceIn;
+    animation-duration: 0.5s;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px 3px, #D6D6E7 0 -3px inset;
+    box-sizing: border-box;
+
+}
 
 header {
     width: 100%;
@@ -46,6 +61,7 @@ header>div>h2{
 
 }
 #home{
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content:center;
@@ -55,109 +71,10 @@ header>div>h2{
     background-position: bottom;
     background-size:contain;
     align-items: center;
+
+
 }
     
-#home>div{
-    max-width: 600px;
-    height: 100vh;
-}
-
-
- 
-#homeA>h1{
-    color: #0451DE;
-    font-family: 'Russo One', sans-serif;
-    font-size: 90px;  
-}
-
-#homeA>h2{
-    color: #0451DE;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-#homeA>nav{
-    display: flex;
-}
-
-#homeA>nav>button{
-    background-color: #0451DE;
-    max-width: 300px;
-    color: white;
-    padding: 20px;
-    border: none;
-    font-family: 'Russo One', sans-serif;
-    margin:5px;
-}
-
-#homeA{
-    
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 90vw;
-    padding: 20px;
-    
-}
-
-#homeB{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    max-height: 30vh;
-}
-#homeB>img{
-    max-height: 400px;
-    max-width: 80vw;
-    
-}
-
-
-@media only screen and (max-width: 768px) {
-    header {
-        /* Estilos específicos para o cabeçalho em dispositivos móveis */
-        height: 80px;
-        /* Adicione outros estilos conforme necessário */
-    }
-
-    header > img {
-        /* Estilos específicos para a logo em dispositivos móveis */
-        margin-left: 20px;
-        /* Adicione outros estilos conforme necessário */
-    }
-
-    header > div > h2 {
-        /* Estilos específicos para o título em dispositivos móveis */
-        margin-right: 20px;
-        /* Adicione outros estilos conforme necessário */
-    }
-
-    #home > div {
-        /* Estilos específicos para as divs filhas de #home em dispositivos móveis */
-        max-width: 90vw;
-        /* Adicione outros estilos conforme necessário */
-    }
-
-    #homeA > h1 {
-        /* Estilos específicos para o título h1 em dispositivos móveis */
-        font-size: 50px;
-        /* Adicione outros estilos conforme necessário */
-    }
-
-    #homeA > h2 {
-        /* Estilos específicos para o título h2 em dispositivos móveis */
-        font-size: 20px;
-        /* Adicione outros estilos conforme necessário */
-    }
-
-    #homeA > nav > button {
-        /* Estilos específicos para o botão em dispositivos móveis */
-        max-width: 200px;
-        /* Adicione outros estilos conforme necessário */
-    }
-
-    /* Adicione outras regras de estilo dentro desta media query conforme necessário */
-}
 
 
 
@@ -367,7 +284,7 @@ header>div>h2{
     position: fixed;
     z-index: 100;
     display:flex;
-    
+    display: none;
     
 }
 
@@ -428,7 +345,7 @@ header>div>h2{
     display:flex;
     flex-wrap: wrap;
     align-items: center;
-   
+   display: none;
 }
 
 

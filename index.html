@@ -9,25 +9,36 @@
 </head>
 
 <body>
+    
     <section id="abafluante">
         <!-- Seu conteúdo da aba flutuante -->
     </section>
 
     <header>
+        
         <img src="imagens/logo.png" alt="">
         
         <div>
             <a href="#secForm"><h2>fazer orçamento</h2></a>
 
-        <a href="#secForm"><h2>sobre</h2></a>
+        <a href="#Section_Serviços"><h2>sobre</h2></a>
         </div>
             
        
     </header>
 
     <section id="home">
-
-       
+        <div class="video">
+            <video id="bg" autoplay muted loop src="imagens/caderno-117.mp4"></video >
+        </div>
+        <div class="containerTexHome">
+            <p class="headersub">Procurando uma empresa de marketing?</p>
+            <h1>
+                Tenha um time feito sob medida para atender seu negócio
+            </h1>
+            <a href="#secForm"><button class="cta-button">FAZER FORMULARIO</button></a>
+            <a href="#Section_Serviços"><button class="cta-button">QUERO MAIS INFORMAÇÕES</button></a>
+        </div>
 
         
 
@@ -86,14 +97,14 @@
 
     <script>
         (function() {
-            emailjs.init('i_jRp0DGmIk93_rIP'); // Substitua 'user_youruserid' pelo seu ID de usuário do EmailJS
+            emailjs.init('i_jRp0DGmIk93_rIP'); 
         })();
 
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
 
-                emailjs.sendForm('service_rlyhrp5', 'template_4yemgiq', this) // Substitua 'template_4yemgiq' pelo seu ID de modelo
+                emailjs.sendForm('service_rlyhrp5', 'template_4yemgiq', this) 
                 .then(function() {
                     alert('Formulário enviado com sucesso!');
                     document.getElementById('contact-form').reset();
